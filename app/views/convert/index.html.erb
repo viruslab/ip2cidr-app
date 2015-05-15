@@ -1,0 +1,25 @@
+<div style="text-align:center">
+  <h1>IP Address to CIDR</h1>
+  <h3>Convert IP Ranges to CIDR Blocks</h3>
+
+<form action='/' method='post'>
+  <p>&nbsp;</p>
+  <p>
+    From:
+    <input type='text' name='startaddress' value="<%= params[:startaddress]%>" >
+  </p>
+
+  <p>
+    To:
+    &nbsp;&nbsp;&nbsp;      <!-- Align the boxes -->
+    <input type='text' name='endaddress' value="<%= params[:endaddress]%>">
+  </p>
+
+  <p>
+    <input type='submit' value='Convert'>
+  </p>
+  </form>
+</div>
+<% if @cidr %>
+  <%= render :partial => "solve" %>
+<% end %>
